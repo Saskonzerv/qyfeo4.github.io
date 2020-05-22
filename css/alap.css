@@ -1,0 +1,176 @@
+#normalbetu{
+	display:none;
+}
+#nagybetu{
+}
+
+
+/*alapértelmezett betűtípus*/
+html {
+	font-family:'Arial', sans-serif;
+	color: white;
+	background-color: black;
+}
+
+/*címsorok*/
+h1,h2 {
+    font-family: Verdana;
+	text-shadow:3px 3px 3px #ccc;
+}
+
+/*sorkizárt szöveg, betűméret*/
+p {
+ text-align:justify;
+ font-size: 140%;
+ 
+}
+
+/*2. oldal háttere*/
+#example1{
+		
+	background-image: url('../media/guitar.jpg');
+	background-size: cover;
+	background-position: center center;
+}
+
+/*táblázat*/
+
+table {border-collapse:collapse;
+      width:500px;
+      height:200px;
+	  font-size: 20px;
+	  }
+table,td,th {
+       border: 1px solid red;
+       padding:5px;
+       }
+td{
+text-align:center;
+
+}
+
+/*menü*/  
+
+header nav ul
+{
+ list-style-type:none;
+ margin: 0px;
+ padding: 0px;
+}
+
+header nav li a
+{
+ width: 400px;
+ display: block;
+ text-align: left;
+ padding: 10px 10px 10px 20px;
+ color: white;
+ text-decoration: none;
+ font-size: 160%;
+ font-weight: bold;
+}
+
+header nav li a:hover            
+{
+ background-color: grey;
+ color: white;
+}
+
+header nav li a[href="#"]                                    
+{
+	background-color: red ;
+	color: white;
+}
+
+
+/*linkállapotok*/         
+a
+{
+	color: red;
+	text-decoration: none;
+}
+a:hover
+{
+	text-decoration: underline;
+}
+a:visited
+{
+	color: pink;
+}
+
+/*oldalszerkezet*/
+
+main{
+	width:100%;				
+	min-width:400px;		
+	max-width:1000px;			
+	background-color:grey;
+    color: white;	
+	padding:20px;			
+	}
+	
+
+main{
+	border-radius: 10px 10px 10px 10px ;			    
+	}
+
+
+footer{
+	min-width: 400px;
+	max-width: 1000px;
+	font-family:'Arial', sans-serif;
+	font-size: 120%;
+	
+	
+}
+
+/*képek igazítása*/
+
+img, video {
+	
+	border-width: 10px;
+	border-style: outset;
+}
+
+
+/*elrendezés*/
+header, nav, main, aside, footer
+{
+	overflow: hidden;              
+	padding: 5px;                 
+}
+
+body {display: grid;}
+
+header {grid-area: fejlec;}
+main {grid-area: fo;}
+/*footer {grid-area: lablec;}*/
+
+body {
+	grid-auto-columns: 1fr 2fr;
+	grid-template-areas: 
+	'fejlec	fo' 
+	'fejlec	fo'
+	'fejlec fo';
+	
+}
+
+/*reszponzivitás + reszponzív képek*/
+
+figure {margin: 0px;}   
+
+@media screen and (max-width: 800px)           /*mobil képernyőre vált egy bizonyos felbontás alatt*/
+/*ha a felbontás max ennyi*/
+{
+	body{
+		grid-auto-columns: 1fr;
+		grid-template-areas:
+		'fejlec'
+		'fo'
+		'fo';
+	}
+}
+
+
+.kipoz a {position:absolute; left:-9999px;}				
+.kipoz a:focus {position:static; background:white}		
